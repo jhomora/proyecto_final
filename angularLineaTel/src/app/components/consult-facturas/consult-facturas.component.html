@@ -1,0 +1,46 @@
+<br>
+<div id="carouselExampleSlidesOnly" class="carousel slide mt-5" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(33).jpg">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg">
+    </div>
+  </div>
+</div><br><br>
+<div class="col mt-5">
+  <h2 class="text-center">Linea telefonica LTP</h2>
+
+  <div class="col">
+  <h2>Facturas</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Celular</th>
+        <th>Fecha</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let factu of factura">
+        <td class="hidden">{{ factu.num_lin_fac }}</td>
+        <td>{{ factu.fecha_emi_fac }}</td>
+        <td>{{ factu.valor_fac }}</td>
+        <td>
+          <button class="btn btn-danger mt-auto" (click)="deleteFactura(factura)">
+            Borrar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
+</div><br><br>
+
+

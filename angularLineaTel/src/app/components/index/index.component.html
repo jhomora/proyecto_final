@@ -1,0 +1,46 @@
+<br>
+<div id="carouselExampleSlidesOnly" class="carousel slide mt-5" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(33).jpg">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg">
+    </div>
+  </div>
+</div><br><br>
+<div class="col mt-5">
+  <h2 class="text-center">Bienvenido, Linea telefonica LTP</h2>
+  <p class="text-center">Por favor registrese para ver las lineas que posee</p>
+
+  <div class="col">
+  <h2>Lineas</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Celular</th>
+        <th>Precio</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lin of linea">
+        <td class="hidden">{{ lin.id_celular }}</td>
+        <td>{{ lin.precio_lin }}</td>
+        <td>{{ lin.estado }}</td>
+        <td>
+          <button class="btn btn-danger mt-auto" (click)="deleteLinea(linea)">
+            Borrar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
+</div><br><br>
+

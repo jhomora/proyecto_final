@@ -1,0 +1,39 @@
+
+<div class="col mt-5">
+  <h2 class="text-center">Agregar Cliente</h2>
+  <form [formGroup]="agregar" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="documento">documento:</label>
+      <input formControlName="documento" placeholder="documento" name="documento" class="form-control" id="documento" required>
+    </div>
+
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input formControlName="nombre" placeholder="nombre" name="nombre" class="form-control" id="nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input formControlName="apellido" placeholder="apellido" name="apellido" class="form-control" id="apellido" required>
+    </div>
+
+    <div class="form-group">
+      <label for="telefono_fijo">telefono fijo:</label>
+      <input formControlName="telefono_fijo" placeholder="telefono fijo" name="telefono_fijo" class="form-control" id="telefono_fijo" required>
+    </div>
+
+     <div class="form-group">
+      <label for="celular">telefono celular:</label>
+      <input formControlName="celular" placeholder="celular" name="celular" class="form-control" id="celular" required>
+    </div>
+
+    <div class="form-group">
+      <label for="fecha_nacimiento">fecha nacimiento:</label>
+      <input type="date" formControlName="fecha_nacimiento" placeholder="fecha Nacimiento" name="fecha_nacimiento" class="form-control" id="fecha_nacimiento" required>
+    </div>
+
+    <button class="btn btn-success" >Registrar</button>
+    <!--<button class="btn btn-primary" routerLink="list-customer">Regresar</button> "-->
+  </form>
+</div>
